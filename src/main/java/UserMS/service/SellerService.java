@@ -73,7 +73,7 @@ public class SellerService {
 //******************************************************************************** LOGIN FOR SELLER
    public boolean login(LoginDTO loginDTO) throws Exception
    {
-	   logger.info("Login for Seller", loginDTO.getEmail(),loginDTO.getPassword());
+	  
 		List<Seller> seller = sellerrepository.findAll();
 		for(Seller s : seller) {
 			if(s.getEmail().equals(loginDTO.getEmail()) && s.getPassword().equals(loginDTO.getPassword())) {

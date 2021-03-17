@@ -51,7 +51,7 @@ public class validator {
 	
 //***********************************************************************************************
 	public static Boolean validateName(String name) {
-			String regex = "^[a-zA-Z-,]+(\\s{0,1}[a-zA-Z-])*$";
+			String regex = "\"^[a-zA-Z]+[-a-zA-Z\\\\s]+([-a-zA-Z]+)$\"";
 			if(name.matches(regex)) {
 				return true;
 			}

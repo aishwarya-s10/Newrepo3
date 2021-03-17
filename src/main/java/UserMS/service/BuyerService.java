@@ -72,7 +72,7 @@ public class BuyerService {
 //********************************************************************************** LOGIN BUYER
    public boolean login(LoginDTO loginDTO) 
    {
-	   logger.info("Login for Buyer", loginDTO.getEmail(),loginDTO.getPassword());
+	  
 		Iterable<Buyer> buyer = buyerrepository.findAll();
 		for(Buyer b : buyer) {
 			if(b.getEmail().equals(loginDTO.getEmail()) && b.getPassword().equals(loginDTO.getPassword())) {
